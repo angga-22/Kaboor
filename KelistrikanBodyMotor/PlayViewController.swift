@@ -9,7 +9,7 @@ import UIKit
 
 class PlayViewController: UIViewController {
     
-    var type : Judul?
+    var type : Judul? = Judul.lampuNetral
     var isLampOn = false
     var isComplete = false
     
@@ -85,13 +85,12 @@ class PlayViewController: UIViewController {
                 gestureModel.lineShapeConnect.path = nil
                 gestureModel.lineShapeConnect.removeFromSuperlayer()
                 gestureModel.isConnect = false
-                checkComplete()
             } else {
                 gestureModel.isConnect = true
                 self.view.layer.addSublayer(gestureModel.lineShapeConnect)
-                checkComplete()
             }
             
+            checkComplete()
             gestureModel.lineShapeTemp.path = nil
             gestureModel.lineShapeTemp.removeFromSuperlayer()
             gestureModel.finishObject.layer.borderWidth = 1
@@ -108,6 +107,12 @@ class PlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        let title = UILabel()
+        title.text = type?.rawValue
+        title.frame = CGRect(x: 14, y: 104, width: 146, height: 30)
+        title.font = UIFont.boldSystemFont(ofSize: 24)
+        view.addSubview(title)
         
         makeSwitch(type: type)
         makeFuse()
@@ -231,8 +236,16 @@ class PlayViewController: UIViewController {
             if (panRecognizerNetralLamp.isConnect && panRecognizerStopContact.isConnect && panRecognizerFuse.isConnect && panRecognizerSwitch.isConnect && panRecognizerAccu2.isConnect) {
               isComplete = true
             } else {
+                netralLampImage.image = UIImage(named: "lamp-n-off.png")
                 isComplete = false
             }
+        case .klakson:
+            if (panRecognizerNetralLamp.isConnect && panRecognizerStopContact.isConnect && panRecognizerFuse.isConnect && panRecognizerSwitch.isConnect && panRecognizerAccu2.isConnect) {
+              isComplete = true
+            } else {
+                isComplete = false
+            }
+
         default:
             if (panRecognizerNetralLamp.isConnect && panRecognizerStopContact.isConnect && panRecognizerFuse.isConnect && panRecognizerSwitch.isConnect && panRecognizerAccu2.isConnect) {
               isComplete = true
