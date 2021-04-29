@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2FC74C263B687400B7AE8D /* horn-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F2FC74B263B687400B7AE8D /* horn-sound.wav */; };
 		3F4F2168263A7C0F0090107A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4F2167263A7C0F0090107A /* Extension.swift */; };
 		3F4F216A263AA68D0090107A /* GestureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4F2169263AA68D0090107A /* GestureModel.swift */; };
 		3F4FC4C72639550500C5B50F /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FC4C62639550500C5B50F /* PlayViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2FC74B263B687400B7AE8D /* horn-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "horn-sound.wav"; sourceTree = "<group>"; };
 		3F4F2167263A7C0F0090107A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3F4F2169263AA68D0090107A /* GestureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureModel.swift; sourceTree = "<group>"; };
 		3F4FC4C62639550500C5B50F /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		3F821F2B2637E8B500AB0AEB = {
 			isa = PBXGroup;
 			children = (
+				3F2FC74B263B687400B7AE8D /* horn-sound.wav */,
 				3F4F2166263A7BFA0090107A /* Extension */,
 				3F821F362637E8B500AB0AEB /* KelistrikanBodyMotor */,
 				3F821F352637E8B500AB0AEB /* Products */,
@@ -161,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2FC74C263B687400B7AE8D /* horn-sound.wav in Resources */,
 				3F821F442637E8B600AB0AEB /* LaunchScreen.storyboard in Resources */,
 				3F821F412637E8B600AB0AEB /* Assets.xcassets in Resources */,
 				3F821F3F2637E8B500AB0AEB /* Main.storyboard in Resources */,
@@ -177,7 +181,6 @@
 				3F4F2168263A7C0F0090107A /* Extension.swift in Sources */,
 				3F4F216A263AA68D0090107A /* GestureModel.swift in Sources */,
 				3F4FC4C72639550500C5B50F /* PlayViewController.swift in Sources */,
-				3F821F3C2637E8B500AB0AEB /* ViewController.swift in Sources */,
 				EFEFD04B26394267001343A8 /* MateriDetailViewController.swift in Sources */,
 				EFDC08482639604A00AA5788 /* ToolDetailViewController.swift in Sources */,
 				3F821F382637E8B500AB0AEB /* AppDelegate.swift in Sources */,

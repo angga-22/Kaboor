@@ -70,6 +70,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="playInteractiveLesson:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fR-vj-peQ"/>
+                                                    <segue destination="fsa-Sk-TO7" kind="show" id="5lq-Sy-eR1"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-0l-ijW" customClass="GradientView" customModule="KelistrikanBodyMotor" customModuleProvider="target">
@@ -214,6 +215,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhJ-FH-AaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="J9J-tS-uMC">
+            <objects>
+                <viewController id="fsa-Sk-TO7" customClass="PlayViewController" customModule="KelistrikanBodyMotor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jmS-SZ-HXt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Mag-Mk-PMc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jhK-VT-ScT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Qv-at-rjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="768"/>
         </scene>
     </scenes>
     <resources>

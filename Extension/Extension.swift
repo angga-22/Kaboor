@@ -7,7 +7,28 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
+var soundURI: URL?
+var audioPlayer: AVAudioPlayer?
+
+extension UIViewController {
+    
+    func playSound(file: String, fileExtension: String, isLoop: Bool = false){
+        soundURI = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURI else {return}
+            audioPlayer = try AVAudioPlayer(contentsOf: uri)
+            audioPlayer?.play()
+        } catch {
+            print("something went wrong")
+        }
+    }
+    
+    func HornSound() {
+        self.playSound(file: "horn-sound", fileExtension: "wav")
+    }
+}
 extension UIView {
     func asCircle(x : Double, y: Double, width: Double, height : Double) -> UIView {
         let circle = UIView()

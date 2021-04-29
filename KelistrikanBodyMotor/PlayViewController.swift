@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlayViewController: UIViewController {
     
-    var type : Judul? = Judul.lampuNetral
+    var type : Judul? = Judul.klakson
     var isLampOn = false
     var isComplete = false
     
@@ -122,14 +123,29 @@ class PlayViewController: UIViewController {
     }
     
     func makeNetralLamp(){
-        var portIGLabel = UILabel()
+        var portALabel = UILabel()
+        var portBLabel = UILabel()
         
         netralLampImage.frame = CGRect(x: 48, y: 564, width: 77.36, height: 58)
-        netralLampImage.image = UIImage(named: "lamp-n-off.png")
         
-        portIGLabel = portIGLabel.makePortName(value: "IG", dot: portNetralLamp, position: .bottom)
+        switch type {
+            case .lampuNetral: do {
+                netralLampImage.image = UIImage(named: "lamp-n-off.png")
+                portALabel = portALabel.makePortName(value: "IG", dot: portNetralLamp)
+            }
+                
+            case .klakson : do {
+                netralLampImage.image = UIImage(named: "horn.png")
+                portALabel = portCirclePositif.makePortName(value: "B", dot: portNetralLamp)
+                portBLabel = portCircleNegatif.makePortName(value: "HR", dot: portNetralLamp2)
+            }
+                
+            default:
+                switchImage.image = UIImage(named: "persneling.png")
+        }
         
-        view.addSubview(portIGLabel)
+        view.addSubview(portALabel)
+        view.addSubview(portBLabel)
         view.addSubview(portNetralLamp)
         view.addSubview(portNetralLamp2)
         view.addSubview(netralLampImage)
@@ -257,12 +273,25 @@ class PlayViewController: UIViewController {
     
     @objc func clickSwitch() {
         if isComplete {
-            if isLampOn {
-                isLampOn = false
-                netralLampImage.image = UIImage(named: "lamp-n-off.png")
-            } else {
-                isLampOn = true
-                netralLampImage.image = UIImage(named: "lamp-n-on.png")
+            switch type {
+            case .lampuNetral:
+                if isLampOn {
+                    isLampOn = false
+                    netralLampImage.image = UIImage(named: "lamp-n-off.png")
+                } else {
+                    isLampOn = true
+                    netralLampImage.image = UIImage(named: "lamp-n-on.png")
+                }
+            case .klakson:
+                self.HornSound()
+            default:
+                if isLampOn {
+                    isLampOn = false
+                    netralLampImage.image = UIImage(named: "lamp-n-off.png")
+                } else {
+                    isLampOn = true
+                    netralLampImage.image = UIImage(named: "lamp-n-on.png")
+                }
             }
         }
     }
