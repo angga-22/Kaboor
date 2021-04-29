@@ -107,7 +107,6 @@ class PlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         
         let title = UILabel()
         title.text = type?.rawValue
@@ -141,7 +140,8 @@ class PlayViewController: UIViewController {
             }
                 
             default:
-                switchImage.image = UIImage(named: "persneling.png")
+                netralLampImage.image = UIImage(named: "lamp-n-off.png")
+                portALabel = portALabel.makePortName(value: "IG", dot: portNetralLamp)
         }
         
         view.addSubview(portALabel)
@@ -294,6 +294,15 @@ class PlayViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "segueNavigation" {
+                if let destVC = segue.destination as? UINavigationController,
+                    let targetController = destVC.topViewController as? InstructionViewController {
+                    targetController.type = type
+                }
+            }
     }
 }
 
