@@ -23,7 +23,7 @@ class MateriDetailViewController: UIViewController {
         materiToolsTable.delegate = self
         
         // di bawah ini hanya test data
-        judulMateri = "Lampu Netral"
+        judulMateri = "Lampu Sein"
         materiModels = getMateriByNama(nama: judulMateri!)
         // kalau judul tidak ada, crash! judul yang tidak dicode ke dalam juga crash
         
