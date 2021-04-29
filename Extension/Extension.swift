@@ -22,12 +22,27 @@ extension UIView {
 }
 
 extension UILabel {
-    func makePortName(value : String, dot : UIView) -> UILabel {
-        let label = UILabel(frame: CGRect(x: dot.frame.origin.x - 30 , y: dot.frame.origin.y - 3, width: 30, height: 21))
-            label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 18.0)
-            label.text = value
-        return label
+    func makePortName(value : String, dot : UIView, position : PositionLabelPort = .left) -> UILabel {
+        switch position {
+        case .top:
+            let label = UILabel(frame: CGRect(x: dot.frame.origin.x - 6, y: dot.frame.origin.y - 24, width: 30, height: 21))
+                label.textAlignment = .center
+            label.font = UIFont.boldSystemFont(ofSize: 18.0)
+                label.text = value
+            return label
+        case .bottom:
+            let label = UILabel(frame: CGRect(x: dot.frame.origin.x - 6 , y: dot.frame.origin.y + 20, width: 30, height: 21))
+                label.textAlignment = .center
+            label.font = UIFont.boldSystemFont(ofSize: 18.0)
+                label.text = value
+            return label
+        default:
+            let label = UILabel(frame: CGRect(x: dot.frame.origin.x - 30 , y: dot.frame.origin.y - 3, width: 30, height: 21))
+                label.textAlignment = .center
+            label.font = UIFont.boldSystemFont(ofSize: 18.0)
+                label.text = value
+            return label
+        }
     }
 }
 
@@ -61,4 +76,10 @@ extension CGPath {
         var transform = CGAffineTransform(a: unitVector.x, b: unitVector.y, c: -unitVector.y, d: unitVector.x, tx: start.x, ty: start.y)
         return path.copy(using: &transform)!
     }
+}
+
+public enum PositionLabelPort {
+    case top
+    case left
+    case bottom
 }
