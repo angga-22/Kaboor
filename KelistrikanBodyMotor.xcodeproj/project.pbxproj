@@ -12,6 +12,7 @@
 		3F821F3F2637E8B500AB0AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F821F3D2637E8B500AB0AEB /* Main.storyboard */; };
 		3F821F412637E8B600AB0AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F821F402637E8B600AB0AEB /* Assets.xcassets */; };
 		3F821F442637E8B600AB0AEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F821F422637E8B600AB0AEB /* LaunchScreen.storyboard */; };
+		EFA61CAC263AC18B002F97A9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA61CAB263AC18B002F97A9 /* GradientView.swift */; };
 		EFDC08482639604A00AA5788 /* ToolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDC08472639604A00AA5788 /* ToolDetailViewController.swift */; };
 		EFEFD03F26393B3E001343A8 /* MateriModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFD03E26393B3E001343A8 /* MateriModel.swift */; };
 		EFEFD04326393B83001343A8 /* ToolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEFD04226393B83001343A8 /* ToolModel.swift */; };
@@ -26,6 +27,7 @@
 		3F821F402637E8B600AB0AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F821F432637E8B600AB0AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F821F452637E8B600AB0AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFA61CAB263AC18B002F97A9 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		EFDC08472639604A00AA5788 /* ToolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolDetailViewController.swift; sourceTree = "<group>"; };
 		EFEFD03E26393B3E001343A8 /* MateriModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriModel.swift; sourceTree = "<group>"; };
 		EFEFD04226393B83001343A8 /* ToolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolModel.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				3F821F452637E8B600AB0AEB /* Info.plist */,
 				EFEFD04A26394267001343A8 /* MateriDetailViewController.swift */,
 				EFDC08472639604A00AA5788 /* ToolDetailViewController.swift */,
+				EFA61CAB263AC18B002F97A9 /* GradientView.swift */,
 			);
 			path = KelistrikanBodyMotor;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				EFDC08482639604A00AA5788 /* ToolDetailViewController.swift in Sources */,
 				3F821F382637E8B500AB0AEB /* AppDelegate.swift in Sources */,
 				EFEFD04326393B83001343A8 /* ToolModel.swift in Sources */,
+				EFA61CAC263AC18B002F97A9 /* GradientView.swift in Sources */,
 				3F821F3A2637E8B500AB0AEB /* SceneDelegate.swift in Sources */,
 				EFEFD03F26393B3E001343A8 /* MateriModel.swift in Sources */,
 			);

@@ -12,23 +12,27 @@ class MateriDetailViewController: UIViewController {
     var materiModels: MateriModel!
     var judulMateri: String?
     
+    @IBOutlet weak var materiImageView: UIImageView!
     @IBOutlet weak var materiTitleLabel: UILabel!
     @IBOutlet weak var materiDeskripsiLabel: UILabel!
-    @IBOutlet weak var materiImageView: UIImageView!
     @IBOutlet weak var materiToolsTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+        
         materiToolsTable.dataSource = self
         materiToolsTable.delegate = self
         
         // di bawah ini hanya test data
-        judulMateri = "Lampu Sein"
+        judulMateri = "Lampu Netral"
         materiModels = getMateriByNama(nama: judulMateri!)
         // kalau judul tidak ada, crash! judul yang tidak dicode ke dalam juga crash
         
         // balik ke kode
-        materiTitleLabel.text = materiModels.materiJudul
+        materiTitleLabel.text = "Tentang \(materiModels.materiJudul ?? "")"
         materiDeskripsiLabel.text = materiModels.materiDeskripsi
         materiImageView.image = UIImage(named: materiModels.materiImage!)
         navigationItem.title = materiModels.materiJudul
@@ -37,7 +41,15 @@ class MateriDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ToolDetailViewController, let cell = sender as? Int{
             vc.toolName = materiModels.materiToolsNames[cell]
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
         }
+    }
+    
+    
+    @IBAction func playInteractiveLesson(_ sender: Any) {
+        // masukin source code buat bagian interaktifnya
     }
 }
 

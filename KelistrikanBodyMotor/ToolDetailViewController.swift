@@ -17,8 +17,8 @@ class ToolDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         toolTerpilih = getToolByNama(nama: toolName!)
-        navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "Back", style: .plain, target: nil, action: nil)
+        /*navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "Back", style: .plain, target: nil, action: nil)*/
         toolImageView.image = UIImage(named: toolTerpilih.toolImage!)
         toolJudulLabel.text = "Tentang \(toolTerpilih.toolName!)"
         toolDescriptionLabel.text = toolTerpilih.toolDescription
