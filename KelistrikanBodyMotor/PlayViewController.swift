@@ -10,7 +10,7 @@ import AVFoundation
 
 class PlayViewController: UIViewController {
     
-    var type : Judul? = Judul.klakson
+    var type : Judul?
     var isLampOn = false
     var isComplete = false
     
