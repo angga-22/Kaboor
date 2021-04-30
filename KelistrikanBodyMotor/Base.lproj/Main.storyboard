@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,83 +24,101 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jm5-nJ-pZp">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="830"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-OJ-goU">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-OJ-goU">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJS-b7-bpL">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-0l-ijW" customClass="GradientView" customModule="KelistrikanBodyMotor" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJS-b7-bpL">
                                                 <rect key="frame" x="18" y="215" width="289" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIv-xd-CxQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIv-xd-CxQ">
                                                 <rect key="frame" x="18" y="249" width="383" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peralatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2C-LC-hId">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Peralatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2C-LC-hId">
                                                 <rect key="frame" x="18" y="284.5" width="147" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-V9-ppa">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-V9-ppa">
                                                 <rect key="frame" x="16" y="323.5" width="382" height="287"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="287" id="5ta-yi-DGy"/>
-                                                </constraints>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="materiToolsCell" id="mdo-5F-eIi">
-                                                        <rect key="frame" x="0.0" y="24.5" width="382" height="43.5"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="materiToolsCell" id="mdo-5F-eIi">
+                                                        <rect key="frame" x="0.0" y="24.5" width="382" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mdo-5F-eIi" id="Gra-NS-Sl5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="352.5" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="352.5" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" red="0.10594195870000001" green="0.1057246998" blue="0.1137266532" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="tintColor" red="0.10594195870000001" green="0.1057246998" blue="0.1137266532" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </tableViewCellContentView>
+                                                        <color key="backgroundColor" red="0.10594195870000001" green="0.1057246998" blue="0.1137266532" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="0.10594195870000001" green="0.1057246998" blue="0.1137266532" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHf-L0-H29">
-                                                <rect key="frame" x="15" y="676.5" width="382" height="58"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHf-L0-H29">
+                                                <rect key="frame" x="15" y="650.5" width="382" height="50"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="xCf-rU-fso"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Play">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="image" image="play.circle.fill" catalog="system" symbolScale="medium"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="playInteractiveLesson:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fR-vj-peQ"/>
                                                     <segue destination="fsa-Sk-TO7" kind="show" id="5lq-Sy-eR1"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-0l-ijW" customClass="GradientView" customModule="KelistrikanBodyMotor" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="d5E-V9-ppa" firstAttribute="top" secondItem="i2C-LC-hId" secondAttribute="bottom" constant="10" id="0vo-gr-HNw"/>
-                                            <constraint firstItem="I3V-OJ-goU" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" id="1Wy-yC-FYX"/>
-                                            <constraint firstItem="d5E-V9-ppa" firstAttribute="centerX" secondItem="I3V-OJ-goU" secondAttribute="centerX" id="6uy-Ar-Iro"/>
                                             <constraint firstAttribute="trailing" secondItem="PIv-xd-CxQ" secondAttribute="trailing" constant="13" id="76i-xE-5Wm"/>
+                                            <constraint firstItem="8nI-0l-ijW" firstAttribute="trailing" secondItem="I3V-OJ-goU" secondAttribute="trailing" id="8HN-Do-MHM"/>
                                             <constraint firstAttribute="trailing" secondItem="i2C-LC-hId" secondAttribute="trailing" constant="249" id="Bmk-qU-I6t"/>
                                             <constraint firstAttribute="height" constant="830" id="DWk-E3-Cpd"/>
                                             <constraint firstAttribute="trailing" secondItem="dHf-L0-H29" secondAttribute="trailing" constant="17" id="EsN-PG-gV8"/>
-                                            <constraint firstItem="dHf-L0-H29" firstAttribute="top" secondItem="d5E-V9-ppa" secondAttribute="bottom" constant="66" id="HuR-7q-6RI"/>
+                                            <constraint firstItem="8nI-0l-ijW" firstAttribute="leading" secondItem="I3V-OJ-goU" secondAttribute="leading" id="GzG-ik-lQg"/>
+                                            <constraint firstItem="dHf-L0-H29" firstAttribute="top" secondItem="d5E-V9-ppa" secondAttribute="bottom" constant="30" id="HuR-7q-6RI"/>
                                             <constraint firstItem="PIv-xd-CxQ" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" constant="18" id="Iak-ym-VJv"/>
                                             <constraint firstItem="I3V-OJ-goU" firstAttribute="top" secondItem="jm5-nJ-pZp" secondAttribute="top" id="PiL-7L-XwI"/>
-                                            <constraint firstItem="aJS-b7-bpL" firstAttribute="top" secondItem="jm5-nJ-pZp" secondAttribute="top" constant="215" id="RII-Jr-okS"/>
+                                            <constraint firstItem="8nI-0l-ijW" firstAttribute="top" secondItem="I3V-OJ-goU" secondAttribute="top" id="QO7-Vc-a0R"/>
                                             <constraint firstItem="d5E-V9-ppa" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" constant="16" id="TFx-wu-cOF"/>
                                             <constraint firstAttribute="trailing" secondItem="aJS-b7-bpL" secondAttribute="trailing" constant="107" id="XMu-zt-g7T"/>
-                                            <constraint firstItem="PIv-xd-CxQ" firstAttribute="top" secondItem="aJS-b7-bpL" secondAttribute="bottom" constant="5" id="XT0-IX-3I9"/>
+                                            <constraint firstItem="8nI-0l-ijW" firstAttribute="bottom" secondItem="I3V-OJ-goU" secondAttribute="bottom" id="aaH-aA-dM9"/>
+                                            <constraint firstAttribute="bottom" secondItem="dHf-L0-H29" secondAttribute="bottom" constant="129.5" id="bsh-9w-vag"/>
                                             <constraint firstItem="i2C-LC-hId" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" constant="18" id="cbN-za-ZyU"/>
+                                            <constraint firstItem="aJS-b7-bpL" firstAttribute="top" secondItem="I3V-OJ-goU" secondAttribute="bottom" constant="16" id="cvX-Fp-I3W"/>
                                             <constraint firstItem="dHf-L0-H29" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" constant="15" id="fVI-bi-zar"/>
                                             <constraint firstItem="aJS-b7-bpL" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" constant="18" id="kDQ-CA-qgZ"/>
-                                            <constraint firstItem="i2C-LC-hId" firstAttribute="top" secondItem="PIv-xd-CxQ" secondAttribute="bottom" constant="15" id="lh2-ZN-HfT"/>
+                                            <constraint firstItem="PIv-xd-CxQ" firstAttribute="top" secondItem="aJS-b7-bpL" secondAttribute="bottom" constant="12" id="lLc-lY-x2L"/>
+                                            <constraint firstItem="i2C-LC-hId" firstAttribute="top" secondItem="PIv-xd-CxQ" secondAttribute="bottom" constant="20" id="lh2-ZN-HfT"/>
                                             <constraint firstAttribute="trailing" secondItem="d5E-V9-ppa" secondAttribute="trailing" constant="16" id="wAh-Ze-GPk"/>
-                                            <constraint firstItem="PIv-xd-CxQ" firstAttribute="top" secondItem="I3V-OJ-goU" secondAttribute="bottom" constant="35" id="zFj-Xv-Kbs"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -116,8 +135,10 @@
                         <constraints>
                             <constraint firstItem="jm5-nJ-pZp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="451-2N-tZc"/>
                             <constraint firstItem="3sO-4l-G9K" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6nI-rb-LGA"/>
+                            <constraint firstItem="jm5-nJ-pZp" firstAttribute="trailing" secondItem="I3V-OJ-goU" secondAttribute="trailing" id="GmV-2C-Ff4"/>
                             <constraint firstItem="3sO-4l-G9K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SHE-EH-fG3"/>
                             <constraint firstAttribute="bottom" secondItem="3sO-4l-G9K" secondAttribute="bottom" id="XDE-xk-q4k"/>
+                            <constraint firstItem="I3V-OJ-goU" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" id="bYI-oe-aAf"/>
                             <constraint firstItem="3sO-4l-G9K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s9k-2z-AKs"/>
                         </constraints>
                     </view>
@@ -128,6 +149,7 @@
                         <outlet property="materiImageView" destination="I3V-OJ-goU" id="4y2-fi-WLK"/>
                         <outlet property="materiTitleLabel" destination="aJS-b7-bpL" id="62w-Cf-Qik"/>
                         <outlet property="materiToolsTable" destination="d5E-V9-ppa" id="Vdk-br-Vx8"/>
+                        <outlet property="playButton" destination="dHf-L0-H29" id="Jad-Yr-Yxg"/>
                         <segue destination="YJE-Gl-UNg" kind="show" identifier="ShowToolDetailSegue" id="3mx-g9-dUm"/>
                     </connections>
                 </viewController>
@@ -143,12 +165,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ZO-SB-pht">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ZO-SB-pht">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="217" id="aiH-MM-4wV"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnc-cf-1A0" customClass="GradientView" customModule="KelistrikanBodyMotor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amx-WU-Y23">
                                 <rect key="frame" x="18" y="231" width="296" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -161,21 +195,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnc-cf-1A0" customClass="GradientView" customModule="KelistrikanBodyMotor" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="414" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d8e-oF-aeM"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Amx-WU-Y23" firstAttribute="leading" secondItem="d8e-oF-aeM" secondAttribute="leading" constant="18" id="0z7-wA-u7k"/>
                             <constraint firstItem="Amx-WU-Y23" firstAttribute="top" secondItem="8ZO-SB-pht" secondAttribute="bottom" constant="14" id="1C8-19-GKw"/>
+                            <constraint firstItem="gnc-cf-1A0" firstAttribute="top" secondItem="8ZO-SB-pht" secondAttribute="top" id="2G7-eL-Bwf"/>
                             <constraint firstItem="8ZO-SB-pht" firstAttribute="leading" secondItem="d8e-oF-aeM" secondAttribute="leading" id="9qs-hM-TvP"/>
                             <constraint firstItem="xnF-Lq-AMI" firstAttribute="leading" secondItem="d8e-oF-aeM" secondAttribute="leading" constant="18" id="M9j-nx-9za"/>
+                            <constraint firstItem="gnc-cf-1A0" firstAttribute="leading" secondItem="8ZO-SB-pht" secondAttribute="leading" id="NAV-oX-9Fs"/>
                             <constraint firstItem="8ZO-SB-pht" firstAttribute="top" secondItem="d8e-oF-aeM" secondAttribute="top" id="WJC-2a-K61"/>
+                            <constraint firstItem="gnc-cf-1A0" firstAttribute="bottom" secondItem="8ZO-SB-pht" secondAttribute="bottom" id="Yk7-ym-Z8G"/>
                             <constraint firstItem="xnF-Lq-AMI" firstAttribute="top" secondItem="Amx-WU-Y23" secondAttribute="bottom" constant="8" symbolic="YES" id="aZB-7t-m29"/>
                             <constraint firstItem="8ZO-SB-pht" firstAttribute="trailing" secondItem="d8e-oF-aeM" secondAttribute="trailing" id="ej2-4u-iCm"/>
+                            <constraint firstItem="gnc-cf-1A0" firstAttribute="trailing" secondItem="8ZO-SB-pht" secondAttribute="trailing" id="fPa-BT-L1A"/>
                             <constraint firstItem="d8e-oF-aeM" firstAttribute="trailing" secondItem="xnF-Lq-AMI" secondAttribute="trailing" constant="30" id="fux-Ns-h2b"/>
                             <constraint firstItem="d8e-oF-aeM" firstAttribute="trailing" secondItem="Amx-WU-Y23" secondAttribute="trailing" constant="100" id="j8L-3R-YHT"/>
                         </constraints>
@@ -340,6 +374,7 @@
     </scenes>
     <resources>
         <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

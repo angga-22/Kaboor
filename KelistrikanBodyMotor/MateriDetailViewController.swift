@@ -16,12 +16,16 @@ class MateriDetailViewController: UIViewController {
     @IBOutlet weak var materiTitleLabel: UILabel!
     @IBOutlet weak var materiDeskripsiLabel: UILabel!
     @IBOutlet weak var materiToolsTable: UITableView!
+    @IBOutlet weak var playButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let backItem = UIBarButtonItem()
         backItem.title = "Back"
         navigationItem.backBarButtonItem = backItem
+        
+        materiToolsTable.layer.cornerRadius = 10
+        playButton.layer.cornerRadius = 10
         
         materiToolsTable.dataSource = self
         materiToolsTable.delegate = self
@@ -66,8 +70,8 @@ extension MateriDetailViewController: UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: "materiToolsCell", for: indexPath)
         let index = materiModels.materiToolsNames[indexPath.row]
         cell.textLabel?.text = index
-        cell.backgroundColor = UIColor.darkGray
         cell.textLabel?.textColor = UIColor.white
+        cell.tintColor = UIColor.white
         return cell
     }
     
