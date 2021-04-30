@@ -36,7 +36,7 @@
                     <constraint firstAttribute="trailing" secondItem="LZe-fT-8Vq" secondAttribute="trailing" id="XEH-gP-BJH"/>
                     <constraint firstItem="Dz2-tR-S4d" firstAttribute="leading" secondItem="LZe-fT-8Vq" secondAttribute="leading" constant="16" id="XI4-re-tEM"/>
                     <constraint firstItem="Dz2-tR-S4d" firstAttribute="top" secondItem="LZe-fT-8Vq" secondAttribute="top" constant="16" id="XTH-q5-np9"/>
-                    <constraint firstAttribute="bottom" secondItem="LZe-fT-8Vq" secondAttribute="bottom" constant="8" id="nFx-Xm-Nps"/>
+                    <constraint firstAttribute="bottom" secondItem="LZe-fT-8Vq" secondAttribute="bottom" id="nFx-Xm-Nps"/>
                     <constraint firstItem="LZe-fT-8Vq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ztQ-2q-BLn"/>
                 </constraints>
             </tableViewCellContentView>
