@@ -57,7 +57,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-V9-ppa">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-V9-ppa">
                                                 <rect key="frame" x="16" y="323.5" width="382" height="287"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,7 +78,7 @@
                                                 </prototypes>
                                             </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHf-L0-H29">
-                                                <rect key="frame" x="15" y="650.5" width="382" height="50"/>
+                                                <rect key="frame" x="15" y="700" width="382" height="50"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="xCf-rU-fso"/>
@@ -111,7 +111,7 @@
                                             <constraint firstItem="d5E-V9-ppa" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" constant="16" id="TFx-wu-cOF"/>
                                             <constraint firstAttribute="trailing" secondItem="aJS-b7-bpL" secondAttribute="trailing" constant="107" id="XMu-zt-g7T"/>
                                             <constraint firstItem="8nI-0l-ijW" firstAttribute="bottom" secondItem="I3V-OJ-goU" secondAttribute="bottom" id="aaH-aA-dM9"/>
-                                            <constraint firstAttribute="bottom" secondItem="dHf-L0-H29" secondAttribute="bottom" constant="129.5" id="bsh-9w-vag"/>
+                                            <constraint firstAttribute="bottom" secondItem="dHf-L0-H29" secondAttribute="bottom" constant="80" id="bsh-9w-vag"/>
                                             <constraint firstItem="i2C-LC-hId" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" constant="18" id="cbN-za-ZyU"/>
                                             <constraint firstItem="aJS-b7-bpL" firstAttribute="top" secondItem="I3V-OJ-goU" secondAttribute="bottom" constant="16" id="cvX-Fp-I3W"/>
                                             <constraint firstItem="dHf-L0-H29" firstAttribute="leading" secondItem="jm5-nJ-pZp" secondAttribute="leading" constant="15" id="fVI-bi-zar"/>
@@ -227,7 +227,7 @@
             </objects>
             <point key="canvasLocation" x="2158" y="169"/>
         </scene>
-        <!--Kelistrikan Bodi Motor-->
+        <!--Main View Controller-->
         <scene sceneID="lcX-mi-IHb">
             <objects>
                 <viewController id="PH6-tX-a38" customClass="MainViewController" customModule="KelistrikanBodyMotor" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,8 +235,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f7E-Bw-Y5h">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f7E-Bw-Y5h">
+                                <rect key="frame" x="0.0" y="160" width="414" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -244,12 +244,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4cd-Dg-22H" firstAttribute="bottom" secondItem="f7E-Bw-Y5h" secondAttribute="bottom" id="7qO-Ue-5KZ"/>
-                            <constraint firstItem="f7E-Bw-Y5h" firstAttribute="top" secondItem="4cd-Dg-22H" secondAttribute="top" id="RPF-19-trk"/>
+                            <constraint firstItem="f7E-Bw-Y5h" firstAttribute="top" secondItem="4cd-Dg-22H" secondAttribute="top" constant="20" id="RPF-19-trk"/>
                             <constraint firstItem="f7E-Bw-Y5h" firstAttribute="leading" secondItem="4cd-Dg-22H" secondAttribute="leading" id="Toz-db-lBV"/>
                             <constraint firstItem="f7E-Bw-Y5h" firstAttribute="trailing" secondItem="4cd-Dg-22H" secondAttribute="trailing" id="giI-m7-1ob"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kelistrikan Bodi Motor" largeTitleDisplayMode="always" id="9dN-TU-flw"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="9dN-TU-flw"/>
                     <connections>
                         <outlet property="zoomTable" destination="f7E-Bw-Y5h" id="kQP-88-ppf"/>
                     </connections>

@@ -17,6 +17,7 @@ class MateriDetailViewController: UIViewController {
     @IBOutlet weak var materiDeskripsiLabel: UILabel!
     @IBOutlet weak var materiToolsTable: UITableView!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var toolLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

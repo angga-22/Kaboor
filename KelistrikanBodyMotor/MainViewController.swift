@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Kelistrikan Bodi Motor"
+        self.title = "KABOOR"
         // Do any additional setup after loading the view.
         overrideUserInterfaceStyle = .dark
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
