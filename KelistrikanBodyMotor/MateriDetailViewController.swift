@@ -10,7 +10,7 @@ import UIKit
 class MateriDetailViewController: UIViewController {
     static let segue = "ShowToolDetailSegue"
     var materiModels: MateriModel!
-    var judulMateri: String?
+    var judulMateri: Judul?
     
     @IBOutlet weak var materiImageView: UIImageView!
     @IBOutlet weak var materiTitleLabel: UILabel!
@@ -27,8 +27,7 @@ class MateriDetailViewController: UIViewController {
         materiToolsTable.delegate = self
         
         // di bawah ini hanya test data
-        judulMateri = "Lampu Netral"
-        materiModels = getMateriByNama(nama: judulMateri!)
+        materiModels = getMateriByNama(nama: judulMateri?.rawValue ?? "")
         // kalau judul tidak ada, crash! judul yang tidak dicode ke dalam juga crash
         
         // balik ke kode
@@ -41,6 +40,11 @@ class MateriDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ToolDetailViewController, let cell = sender as? Int{
             vc.toolName = materiModels.materiToolsNames[cell]
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
+        } else if let vc = segue.destination as? PlayViewController {
+            vc.type = judulMateri
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
